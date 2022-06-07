@@ -1,0 +1,18 @@
+{
+  "name": "MockupUI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "Susilo Suharsono",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "daisyui": "^2.15.2",
+    "tailwindcss": "^3.0.24"
+  }
+}
