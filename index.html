@@ -42,10 +42,20 @@
           <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
         </div>
         <div class="navbar-end">
-          <div class="bg-white rounded-lg hidden ease-in-out" id="search-bar">
-            <input class="p-2" type="text" placeholder="Search" />
+          <div class="bg-white rounded-lg hidden" id="search-bar">
+            <input
+              class="rounded-lg ease-out transition duration-300 py-2 pl-2"
+              id="search-field"
+              type="text"
+              placeholder="Search"
+            />
           </div>
-          <button id="toggle-search" class="btn btn-ghost btn-circle">
+          <button
+            id="btn-show"
+            class="btn btn-ghost btn-circle"
+            onclick="show()"
+            ondblclick="hide()"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5"

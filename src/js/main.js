@@ -1,14 +1,24 @@
-
 // Search Bar & Toggle
-var btnToggle = document.getElementById('toggle-search');
+
+
+var btnShow = document.getElementById('btn-show')
 var searchBar = document.getElementById('search-bar');
+function show() {
 
-window.onclick = function (event) {
-    if (event.target !== 'searchBar') {
-        searchBar.classList.toggle('hidden')
+    if (searchBar.classList.contains('hidden')) {
+        searchBar.classList.remove('hidden')
+        searchBar.classList.add('block')
+
     }
-};
+}
+function hide() {
+    searchBar.classList.remove('block')
+    searchBar.classList.add('hidden')
+}
 
-btnToggle.onclick = function () {
-    searchBar.classList.toggle('block')
-};
+
+
+
+
+
+
