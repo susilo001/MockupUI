@@ -2,12 +2,15 @@
 @tailwind base;
 @layer components {
   .carousel-item {
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
     opacity: 0;
     display: block;
     position: absolute;
   }
   .carousel-item[data-active] {
     opacity: 1;
+    transition-delay: 0ms;
   }
 }
 @tailwind components;

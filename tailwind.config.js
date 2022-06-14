@@ -21,7 +21,11 @@ module.exports = {
       'title': ['Lato', 'sans-serif', 'Bold-700'],
 
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '100': '37rem'
+      }
+    },
   },
   plugins: [require("daisyui"), require("autoprefixer")],
 }
