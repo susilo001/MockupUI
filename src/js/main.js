@@ -2,6 +2,26 @@ import LazyLoad from "./lazyload.esm.js";
 import themeChange from './theme-change/index.js';
 import themeToggle from './theme-change/index.js';
 
+// Carousel
+const buttonCaraousel = document.querySelectorAll("[data-carousel-button]")
+buttonCaraousel.forEach(button => {
+    button.addEventListener('click', () => {
+        const offset = button.dataset.carouselButton === "next" ? 1 : -1
+        const slides = button.closest("[data-carousel]").querySelector("[data-slides]")
+
+        const activeSlides = slides.querySelector("[data-active]")
+        let newIndex = [...slides.children].indexOf(activeSlides) + offset
+        if (newIndex < 0) newIndex = slides.children.length - 1
+        if (newIndex >= slides.children.length) newIndex = 0
+
+        slides.children[newIndex].dataset.active = true
+        delete activeSlides.dataset.active
+
+    })
+})
+
+
+// Search Bar & Toggle
 var searchBar = document.getElementById('search-bar');
 var btnshow = document.getElementById('btn-show');
 btnshow.addEventListener('click', function () {
@@ -16,6 +36,7 @@ searchBar.addEventListener('mouseout', () => {
     searchBar.classList.add('hidden')
 })
 
+// Toggle Darkmode
 themeToggle()
 themeChange()
 
@@ -29,7 +50,7 @@ var lazyLoadInstance = new LazyLoad({
     }
 });
 lazyLoadInstance.update();
-// Search Bar & Toggle
+
 
 
 
