@@ -1,6 +1,7 @@
 module.exports = {
   content: [
     "./src/*.html",
+    "./src/components/*.ts"
   ],
   daisyui: {
     styled: true,

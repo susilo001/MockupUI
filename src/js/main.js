@@ -2,7 +2,9 @@ import LazyLoad from "./lazyload.esm.js";
 import themeChange from './theme-change/index.js';
 import themeToggle from './theme-change/index.js';
 
+
 // Carousel
+
 const buttonCaraousel = document.querySelectorAll("[data-carousel-button]")
 buttonCaraousel.forEach(button => {
     button.addEventListener('click', () => {
@@ -50,6 +52,7 @@ var lazyLoadInstance = new LazyLoad({
     }
 });
 lazyLoadInstance.update();
+
 
 
 
